@@ -69,21 +69,34 @@ inquirer
 
 
         let generateReadme = 
-        `# ${response.title}
+        `
+        ## ${response.title}
+
         (LICENSE BADGE HERE)
-        ## Description
+
+        - [Description](#description)
+        - [Installation Instructions](#Installation%20Instructions)
+        - [Usage Instructions](#Usage%20Instructions)
+        - [Contribution Guidelines](#Contribution%20Guidelines)
+        - [Testing Guidelines](#Testing%20Guidelines)
+        - [Questions?](#Questions?)
+
+        ### Description
         ${response.description}
         
-        ## Installation Instructions
+        ### Installation Instructions
         ${response.installation}
         
-        ## Usage Instructions
+        ### Usage Instructions
         ${response.usage}
     
-        ## Contribution Guidelines
+        ### Contribution Guidelines
         ${response.contribution}
+
+        ### Testing Guidelines
+        ${response.tests}
         
-        ## Questions?
+        ### Questions?
         ${response.github}
         or email me at ${response.email}
         
@@ -92,30 +105,4 @@ inquirer
         writeFileAsync('./Generated/README.MD', generateReadme);
     })
     .then(() => console.log("file made successfully!"));
-    // .catch((err) => {
-    //     console.log(err);
-    // });
-
-
-// function generateMarkdown(response) {
-//     return `# ${response.title}
-//     (LICENSE BADGE HERE)
-//     ## Description
-//     ${response.description}
-    
-//     ## Installation Instructions
-//     ${response.installation}
-    
-//     ## Usage Instructions
-//     ${response.usage}
-
-//     ## Contribution Guidelines
-//     ${response.contributing}
-    
-//     ## Questions?
-//     ${response.github}
-//     or email me at ${response.email}
-    
-//     `
-// }
-// console.log(response)
+ 
